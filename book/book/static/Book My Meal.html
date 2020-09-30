@@ -1,0 +1,384 @@
+<!--DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"-->
+<!-- saved from url=(0044)https://bookmymeal.in/index.php/Web/register -->
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+      
+      <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
+      <link rel="icon" href="logo1.png" type="image/x-icon" />
+      <title>Book My Meal</title>
+      <link href="./Book My Meal_files/bootstrap.min.css" rel="stylesheet">
+      <link href="./Book My Meal_files/custom.css" rel="stylesheet">
+      <link href="./Book My Meal_files/gothic.css" rel="stylesheet">
+      <link href="./Book My Meal_files/font-awesome.min.css" rel="stylesheet">
+      <link href="./Book My Meal_files/bootstrap-datetimepicker.css" rel="stylesheet">
+     <!-- <link type="image/png" rel="shortcut icon" href="https://bookmymeal.in/webAssets/images/favicon.png">-->
+      <link href="./Book My Meal_files/jquery-ui.css" rel="stylesheet">
+      <link href="./Book My Meal_files/jquery.fancybox.min.css" rel="stylesheet">
+      <script src="./Book My Meal_files/jquery.min.js.download"></script> 
+      
+   </head>
+   <body style="background-image: url(back-reg.png);">
+      <!--<script type="text/javascript">
+         var SITE_URL = "https://bookmymeal.in/index.php/web/";
+         var API_URL = "https://bookmymeal.in/bookmymeal/api/index1.php/";
+         var BASE_URL = "https://bookmymeal.in/";
+      </script>-->
+      <div class="se-pre-con" style="display: none;"></div>
+      <header>
+        
+         <div class="main_header sticky background">
+            <div class="container">
+               <div class="row">
+                  <div class="col-sm-3 col-xs-10">
+                     <a onclick="clear_localStorage()" href="index.html"><img width="170" src="logo.png" alt="..."></a>
+                  </div>
+                  <div class="col-sm-9 col-xs-2">
+                     <div class="menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                     </div>
+                     <nav>
+                        <ul class="pull-right">
+                           <li onclick="clear_localStorage()"><a href="index.html" class="">Home</a></li>
+                           <li onclick="clear_localStorage()"><a href="about-us2.html" class="">About Us</a></li>
+                          <!-- <li onclick="clear_localStorage()"><a href="https://bookmymeal.in/index.php/Web/gallery" class="">Gallery</a></li>-->
+                           <li onclick="clear_localStorage()"><a href="contact.html" class="">Contact</a></li>
+
+                            
+                           <li class=" login dropdown beforSession">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                              <ul aria-labelledby="drop2" class="dropdown-menu account" id="afterSession">
+                                  <li><a href="login.html"><i class="fa fa-lock"> Login</i></a></li>
+                                  <li onclick="clear_localStorage()"><a href="Book My Meal.html"><i aria-hidden="true" class="fa fa-file-text"></i> Register</a></li>
+                                 <!--<li onclick="clear_localStorage()"><a href="https://bookmymeal.in/index.php/Web/guestRegister"><i aria-hidden="true" class="fa fa-user-times"></i> Guest Account</a></li>-->
+                              </ul>
+                           </li>
+                          </ul>
+                     </nav>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!--code start for login popup-->
+     <!-- <div data-backdrop="static" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="timeSlot1" class="modal fade bs-example-modal-sm" style="display: none;">
+         <div role="document" class="modal-dialog modal-sm">
+            <div class="modal-content">
+               <div class="LoginErrors"></div>
+               <div class="LoginSuccess"></div>
+               <div class="modal-header">
+                  <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span></button>
+                  <h4 id="myModalLabel" class="modal-title red">Login</h4>
+               </div>
+               <form name="loginForm" id="loginForm" role="form" method="post" class="validate" novalidate="novalidate">
+                  <input style="display:none" type="text" name="fakeusernameremembered">
+                  <input style="display:none" type="password" name="fakepasswordremembered">
+                  <div class="modal-body input-style">
+                     <div class="form-group">
+                        <label>Mobile No. or  Email</label>
+                        <input class="form-control input" type="text" name="user_email" id="user_email" data-validate="required" autocomplete="off" data-message-required="Please enter email Id or mobile number">
+                     </div>
+                     <div class="form-group">
+                        <label>Password</label>
+                        <input class="form-control input" type="password" name="user_password" id="user_password" data-validate="required" data-message-required="Please enter password">
+                    
+                     </div>
+                     <input type="hidden" id="check_login" value="1">
+                    
+                     <a class="login-forgot-password" href="https://bookmymeal.in/index.php/Web/register#" id="forgotPwd">Forgot Password?</a>
+                  </div>
+                  <div class="modal-footer">
+                     <input class="btn btn-red form-group" type="submit" name="loginSubmit" id="loginSubmit" value="Login">
+                     <p class="size12 text-center">Don't have an account?<a class="red" href="Book My Meal.html"> SignUp here.</a>
+                     	</p><p class="text-center"><strong>OR</strong></p>
+                     <p class="text-center">Login as a<a class="red" href="https://bookmymeal.in/index.php/Web/guestRegister"> Guest</a></p>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>-->
+      <!--code end for login popup-->
+      <!-- Code for forgot password popup-->
+      <div data-backdrop="static" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="forgotPop" class="modal fade bs-example-modal-sm" style="display: none;">
+         <div role="document" class="modal-dialog modal-sm">
+            <div class="modal-content">
+               <div class="LoginErrors1"></div>
+               <div class="LoginSuccess1"></div>
+               <div class="modal-header">
+                  <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span></button>
+                  <h4 id="myModalLabel" class="modal-title red">Forgot Password</h4>
+               </div>
+               <form name="forgotForm" id="forgotForm" role="form" method="post" class="validate" novalidate="novalidate">
+                  <div class="modal-body input-style">
+                     <div class="form-group">
+                        <label>Mobile Number</label>
+                        <input class="form-control input" type="text" name="user_contact" id="user_contact4" data-validate="required,number,maxlength[10]" autocomplete="off" data-message-required="Please enter valid mobile number">
+                     </div>
+                     <!--         <a class="login-forgot-password" href="#">Forgot Password?</a>-->
+                  </div>
+                  <div class="modal-footer">
+                     <input class="btn btn-red" type="submit" name="forgotSubmit" id="forgotSubmit" value="Done">
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+      <script>
+         function clear_localStorage(){
+         	// Both order storage clear
+		    localStorage.setItem("packageCouponId", '');
+		    localStorage.setItem("packageCouponAmnt", '');
+		    localStorage.setItem('check_signup', '');
+             // order storage clear
+             localStorage.setItem('address_id','')
+             localStorage.setItem('timeslot_id','');
+             localStorage.setItem('delivery_time','');
+             localStorage.setItem('package_for','');
+             var cart = {};
+             cart.products = [];
+             localStorage.setItem('cart', JSON.stringify(cart));
+             // package storage clear
+             localStorage.setItem('address_id','')
+             localStorage.setItem('package_for','');
+             localStorage.setItem("time_slot_id1", '');
+             localStorage.setItem("time_slot_text1", '');
+             localStorage.setItem("time_slot_id2", '');
+             localStorage.setItem("time_slot_text2", '');
+             localStorage.setItem("start_date", '');
+             localStorage.setItem("end_date", '');
+             localStorage.setItem("packgId", '');
+             localStorage.setItem("package_name", '');
+             localStorage.setItem("lunch_cost", '');
+             localStorage.setItem("dinner_cost", '');
+             localStorage.setItem("combine_cost", '');
+             var order_info = {};
+             localStorage.setItem('order_info', JSON.stringify(order_info));
+         }
+      </script>
+
+  <div class="reg-main">
+  	<div data-backdrop="static" class=" bs-example-modal-sm">
+  <div role="document" class="modal-dialog modal-sm form-start">
+    <div class="modal-content main-reg-box">
+        <div class="LoginErrors22"></div>
+        <div class="LoginSuccess22"></div>
+      <div class="modal-header">
+        <h4 id="myModalLabel" class="modal-title red" align="center">Sign Up</h4>
+      </div>
+      <form name="registerForm" id="registerForm" role="form" method="post" class="validate" novalidate="novalidate">
+        <input style="display:none" type="text" name="fakeusernameremembered">
+        <input style="display:none" type="password" name="fakepasswordremembered">
+      <div class="modal-body input-style">
+        <div class="form-group"> 
+            <input class="form-control input" type="text" name="user_fullname" id="user_fullname" data-message-required="Please enter fullname" data-validate="required" placeholder="Full Name">
+        </div>
+        <div class="form-group">
+            <input class="form-control input" type="email" name="user_email" placeholder="E-mail" data-message-required="Please enter email-id" id="user_email1" data-validate="required,email">
+        </div>
+         <div class="form-group">
+             <input class="form-control input" type="password" name="user_password" placeholder="Password" id="user_password5" data-validate="user_password" data-message-required="Please enter password">
+        </div>
+         <div class="form-group">
+            <input class="form-control input" type="password" name="cnfrm_password" placeholder="Confirm Password" id="cnfrm_password" equalto="#user_password5" data-validate="required">
+        </div>
+         <div class="form-group">
+             <input class="form-control input" type="text" name="user_contact" placeholder="Mobile Number" id="user_contact" data-validate="required,number,maxlength[10]" data-message-required="Please enter mobile number">
+        </div>
+         <div class="form-group">
+             <input class="form-control input" type="text" name="refferal_code" id="refferal_code" placeholder="Referral Code(Optional)">
+        </div>
+          <div class="form-group">
+            	<select name="city_id" id="city_id" class="form-control input" data-validate="required" data-message-required="Please select city">
+                    <option value="required">Select City</option>
+                    <option value="1">Patna</option>
+                    <option value="1">Patna</option>
+                    <option value="1">Patna</option>
+                    <option value="1">Patna</option>
+                    <option value="1">Patna</option>
+                    <option value="1">Patna</option>
+                    <option value="1">Patna</option>
+                    <option value="1">Patna</option>
+              </select>
+         </div>
+         
+         <div class="form-group">
+            <select class="form-control input" name="area_id" id="area_id" data-validate="required" data-message-required="Please select area">
+              <option value="">Select Area</option>
+              <option value="">Select Area</option>
+              <option value="">Select Area</option>
+              <option value="">Select Area</option>
+              <option value="">Select Area</option>
+              <option value="">Select Area</option>
+              <option value="">Select Area</option>
+            </select>
+        </div>
+         <div class="form-group">
+             
+             <textarea class="form-control input" placeholder="Address" name="user_address" id="user_address" data-validate="required" data-message-required="Please enter address"></textarea>
+        </div>  
+      </div>
+    
+      <div class="modal-footer">
+          <input type="submit" class="btn btn-red submit-signup" name="registerSubmit" id="registerSubmit" value="Sign up">
+      </div>
+            </form>
+    </div>
+  </div>
+</div>
+  </div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 col-sm-12">
+                <a onclick="clear_localStorage()" href="https://bookmymeal.in/index.php/Web/register#"><img width="150" src="./Book My Meal_files/logo.png" alt="..."></a>
+                <p>With Book My Meal you can order your lunch,Dinner and Monthly Package online, without leaving your couch at home or your desk at work. Book My Meal is indeed the smartest way to order your meal. we are committed to providing consumers with high-quality, hygienic that are flavourful, nutritious and convenient.
+Now your food is definitely, one click away!
+                                                                                                                                                                                                                                                                        </p>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <ul class="footer-quick-links">
+                    <h4> Quick Links</h4>
+                    <li onclick="clear_localStorage()"><a href="index.html">Home</a></li>
+                    <li onclick="clear_localStorage()"><a href="about-us2.html">About Us</a></li>
+                    <!--<li><a href="#">Packages</a></li>-->
+                                        <li onclick="clear_localStorage()"><a href="contact.html">Contact Us</a></li>
+                    <li onclick="clear_localStorage()"><a href="https://bookmymeal.in/index.php/Web/terms">Terms &amp; Conditions</a></li>
+                    <li onclick="clear_localStorage()" class="afternone"><a href="https://bookmymeal.in/index.php/Web/faq">FAQ</a></li>
+                </ul>
+
+                <div class="clearfix"></div>
+            </div>
+          <!--   <div class="col-md-3">
+                <h4>Subscribe</h4>
+                <div class="input-group">
+                    <input type="text" placeholder="Enter your email" class="form-control">
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-red">Submit</button>
+                    </span> 
+                </div>
+            </div> -->
+            <div class="col-md-3 col-sm-12">
+                <h4>Call Us</h4>
+                <h6 class="contact-number-ontop">+9195-345-88880, 95-345-77773</h6>
+                <h4 class="followes">Follow Us</h4>
+                <ul class="footer_icons">
+                    <li onclick="clear_localStorage()"><a href="https://www.facebook.com/bookmymealofficial/" class="social"><i class="fa fa-facebook"></i></a></li>
+                    <li onclick="clear_localStorage()"><a href="https://www.instagram.com/BOOKMYMEAL/" class="social"><img width="12px" height="12px" src="./Book My Meal_files/insta.png" alt="..."></a></li>
+                    <li onclick="clear_localStorage()"><a href="https://www.google.co.in/" class="social"><i class="fa fa-google-plus"></i></a></li>
+                </ul>
+            </div>
+        </div>
+             <div title="Scroll to top" id="test"><img width="35px" height="35px" src="./Book My Meal_files/bottem_to_top.png" alt="..."></div> 
+    </div>
+    <div class="copyright">
+        <div class="container">
+            <div class="">
+                <p>Copyright ©2019 BookMyMeal All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+ 
+</footer>
+
+<div class="footer_btn">
+    <div class="col-sm-8 col-xs-6 col-xxs-12">
+        <!-- <div id='slotsSet'></div> -->
+        <div class="cart_border">
+            <img alt="..." src="./Book My Meal_files/cart_icon.png">  <span>Cart / Total Items : <span class="clearItemCount" id="cartItem"></span><span></span><span class="clearItemCount" id="cartItem_price"></span></span>
+        </div>
+    </div>
+    <div class="col-sm-4 col-xs-6 col-xxs-12 pr0 pos-relative">
+        
+        <div class="button" data-toggle="modal" data-target="#addOns">Proceed</div>
+
+    </div>
+</div>
+
+
+<div id="dialog">
+    <h4 id="dialogData"></h4>
+</div>
+
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="./Book My Meal_files/bootstrap.min.js.download"></script>
+
+
+<script type="text/javascript">
+      $('#test').click(function() {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 800);
+
+        });
+</script>
+<script>
+    $(document).ready(function (e) {
+        $('.menu').click(function () {
+            $('nav, body').toggleClass('active');
+        });
+        $('.main_header ul li').click(function () {
+            $('.main_header ul li > ul').toggleClass('active');
+        });
+        //$('.action_btns').click(function () {
+            //$('.action_btns, .package_time').toggleClass('active');
+        //});
+
+
+    });
+
+    $("div.bhoechie-tab-menu>div.list-group>a").click(function (e) {
+        e.preventDefault();
+        $(this).siblings('a.active').removeClass("active");
+        $(this).addClass("active");
+        var index = $(this).index();
+        $("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
+        $("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
+    });
+    
+</script>
+<script>
+   var fixmeTop = $('#fixme').offset().top;
+   $(window).scroll(function () {
+       var currentScroll = $(window).scrollTop();
+        if (currentScroll >= fixmeTop) {
+           $('#fixme').addClass('active')
+        } else {
+            $('#fixme').removeClass('active')
+       }
+   });
+</script>
+<script>
+		$(window).scroll(function() {
+	if ($(this).scrollTop() > 1){  
+		$('.main_header').addClass("sticky");
+		$('.main_header').addClass("background");
+	  }
+	  else{
+		$('.main_header').removeClass("sticky");
+		$('.main_header').removeClass("background");
+	  }
+	});
+</script>
+
+
+<!--<script src="https://bookmymeal.in/webAssets/js/bootstrap-datetimepicker.js"></script>-->
+<script src="./Book My Meal_files/jquery-ui.js.download"></script>
+<script src="./Book My Meal_files/modernizr.js.download"></script>
+<script src="./Book My Meal_files/jquery.validate.min.js.download"></script>
+<script src="./Book My Meal_files/xenon-custom.js.download"></script>
+<script src="./Book My Meal_files/script.js.download"></script>
+
+
+ 
+
+
+
+
+
+
+
+</body></html>

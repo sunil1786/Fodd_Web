@@ -1,0 +1,99 @@
+{% extends 'adminhome.html' %}
+{% load static %}
+
+
+{% block slider %}
+
+ <section class="banner_area">
+            <div class="container">
+                <div class="banner_content">
+                    <h4>Manage Menu</h4>
+                  <!--  <a href="{{curl}}user/home/">Home</a>
+                    <a class="active" href="{{curl}}user/menu/">Menu</a> -->
+                </div>
+            </div>
+ </section>
+
+
+{% endblock %}
+        <!--================End Banner Area =================-->
+        
+        <!--================End Our feature Area =================-->
+{% block service %}
+<h1 align="center">Add menu List</h1>
+
+
+<font style="color:orange;font-size:20px;">{{output}}</font>
+<br>
+<form enctype="multipart/form-data" method="post" action={{curl}}myadmin/managemenu/ >
+{% csrf_token %}
+<table class="table table-striped" cellspacing="10">
+<tr>
+    <td>Meal Name</td>
+    <td><input type="text" name="mealnm" placeholder="meal name"/></td>
+    <td>Meal Price</td>
+    <td><input type="text" name="mealprice" placeholder="meal price"/></td>
+</tr>
+<tr>
+    <td>Meal discription</td>
+    <td><input type="text" name="mealdisc" placeholder="discription"/></td>
+
+    <td>meal Image</td>
+    <td><input type="file" name="mealimg"/></td>
+</tr>
+<tr>
+    <td>Meal Category</td>
+    <td><select name="mealcatnm">
+    <option>select category</option>
+    
+      <option>break</option>
+      <option>lunch</option>
+      <option>dinner</option>
+      <option>snaks</option>
+      <option>coffee</option>
+        
+    </select>
+    </td>
+    <td><input class="btn btn-success" type="submit" name="s" value="Add menu"/></td>
+    <td></td>
+</tr>
+</table>
+<table>
+    <tr style="background-color: grey;">
+        <th>
+            <td></td>
+        </th>
+    </tr>
+</table>
+<table class="table table-striped">
+    <tr style="background-color: grey">
+        <th>Meal ID</th>
+        <th>Meal Name</th>
+        <th>Meal Price</th>
+        <th>Meal Discription</th>
+        <th>Meal Category</th>
+        <th>Edit Category</th>
+        <th>Action</th>
+    </tr>
+{% for row in menulist %}
+    <tr>
+        
+        <td>{{row.mealid}}</td>
+        <td>{{row.mealnm}}</td>
+        <td>{{row.mealprice}}</td>
+        <td>{{row.mealdisc}}</td>
+        <td>{{row.mealcatnm}}</td>
+        <td><a href="#" title="Edit" ><i class="fa fa-edit"></i></a></td>
+        <td><a href="{{curl}}myadmin/delmenu?mealid={{row.mealid}}&vstatus=delete" style="color: red; font-size: 18px" title="Delete" ><i class="fa fa-trash"></i></a></td>
+        
+    </tr>
+{% endfor %}
+</table>
+
+{% endblock %}
+{% block todaymenu %}
+{% endblock %}
+{% block chef %}
+{% endblock %}
+{% block news %}
+{% endblock %}

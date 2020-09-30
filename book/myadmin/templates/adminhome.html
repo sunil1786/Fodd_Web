@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block slider %}
+        <section class="banner_area">
+            <div class="container">
+                <div class="banner_content">
+                    <h4>welcome Admin</h4>
+                  <!--  <a href="{{curl}}home/">Home</a>
+                    <a class="active" href="{{curl}}menu/">Menu</a> -->
+                </div>
+            </div>
+        </section>
+{% endblock %}
+
+{% block menu %}
+        <header class="main_menu_area" style="margin-top: 10px;">
+            <nav class="navbar navbar-default">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="{{curl}}myadmin"><img src="{% static 'logo.png' %}" alt=""></a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active"><a href={{curl}}myadmin/>Home</a></li>
+                       <!--     <li class="dropdown submenu">
+                                <a href={{curl}}about/>about</a> -->
+                            <!--<ul class="dropdown-menu">
+                                    <li><a href="about-us.html">About Us</a></li>
+                                    <li><a href="about-us2.html">About Us2</a></li>
+                                </ul>-->
+                            </li>
+                            <li class="dropdown submenu">
+                                <a href="{{curl}}myadmin/managemenu/" class="dropdown-toggle"  role="button" aria-haspopup="true" aria-expanded="false">Menu </a>
+                                <ul class="dropdown-menu">
+                                   <!-- <li><a href="menu-grid.html">Menu Grid</a></li>
+                                    <li><a href="menu-list.html">Menu List</a></li>-->
+                                </ul>
+                            </li>
+                           
+                            <li class="dropdown submenu">
+                                <a href="" class="dropdown-toggle"  role="button" aria-haspopup="true" aria-expanded="false">Category </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="{{curl}}myadmin/admincategory/">Manage category</a></li>
+                                    <li><a href="{{curl}}myadmin/adminsubcat/">Add subcategory</a></li>
+                                    <!--<li><a href="blog-details.html">Blog Details</a></li>-->
+                                </ul>
+                            </li>
+                             <li class="dropdown submenu">
+                                <a href="{{curl}}myadmin/managepackages/" class="dropdown-toggle"  role="button" aria-haspopup="true" aria-expanded="false">Packages </a>
+                            <!--   <ul class="dropdown-menu">
+                                    <li><a href="{{curl}}myadmin/managepackages/"> Manage Packages </a></li>
+                                    <li><a href="#">Add Packages</a></li>
+                                   <li><a href="blog-details.html">Blog Details</a></li> 
+                                </ul> -->
+                            </li>
+
+                            <li><a href="{{curl}}myadmin/manageusers/"> Customers</a></li>
+                                <li class="dropdown submenu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                <ul class="dropdown-menu">
+                                  <!--  <li><a href="{{curl}}login/">Login</a></li>
+                                    <li><a href="{{curl}}register/">Register</a></li> -->
+                                    <li><a href="#">My profile</a></li>
+                                    <li><a href="#">Setting</a></li>
+                                    <li><a href="{{curl}}login/">Log Out</a></li>
+                                    <!--<li><a href="blog-details.html">Blog Details</a></li>-->
+                                </ul>
+                                </li>
+                            <li><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+                        </ul>
+
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+        </header>
+
+{% endblock %}
+{% block service %}
+{% endblock %}
+{% block todaymenu %}
+{% endblock %}
+{% block chef %}
+{% endblock %}
+{% block news %}
+{% endblock %}
+{% block footer %}
+<div class="copy_right_area">
+                <div class="container">
+                    <div class="pull-left">
+                        <h5><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Welcome To Our Meal <i class="fa fa-heart-o" aria-hidden="true"></i>   <a href="https://colorlib.com" target="_blank">{{sunm}}</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+</p></h5>
+                    </div>
+                    <div class="pull-right">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active"><a href="#">Home</a></li>
+                            <li><a href="{{curl}}admin/adminmenu">Menu</a></li>
+                            <li><a href="#">Category</a></li>
+                            <li><a href="">Packages</a></li>
+                            <li><a href="">Customers</a></li>
+                          <!--  <li><a href="#">News</a></li>
+                            <li><a href="#">Contact Us</a> -->
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+{% endblock %}

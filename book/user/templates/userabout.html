@@ -1,0 +1,100 @@
+{% extends 'userhome.html' %}
+{% load static %}
+
+
+{% block slider %}
+
+ <section class="banner_area">
+            <div class="container">
+                <div class="banner_content">
+                    <h4>About Us</h4>
+                    <a href="{{curl}}user/home/">Home</a>
+                    <a class="active" href="{{curl}}user/about/">About Us</a>
+                </div>
+            </div>
+ </section>
+
+
+{% endblock %}
+        <!--================End Banner Area =================-->
+        
+        <!--================About Us Content Area =================-->
+
+
+{% block service %}
+        <section class="about_us_content">
+            <div class="container">
+                <div class="row about_inner_item">
+                    <div class="col-md-6">
+                        <div class="about_left_content">
+                            <h4>Since 2018</h4>
+                            <p>Our mission is simple: to develop the absolute best recipes for all of your favourite foods. To do this, we test each recipe 5-10 sometimes as many as 20 times, until we arrive at the combination of ingredients, technique, temperature, cooking time, and equipment that yields the best tasteful recipe. We believe that cooking and catering is an art that is mastered through experience along with great passion for food.</p>
+                            <ul>
+                                <li><a href="#"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Helping people discover great places around them.</a></li>
+                                <li><a href="#"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>Building amazing experiences around dining.</a></li>
+                                <li><a href="#"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i>Enabling restaurants to create amazing experiences.</a></li>
+                                <li><a href="#"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> At vero eos et accusamus et iusto odio dignissimos.</a></li>
+                            </ul>
+                            <p>Aditya started Book My Meal in Oct 2016 during Durga Puja and Diwali season. It was a tough time to start it as there was a shortage of delivery people. This was the time when Aditya himself delivered orders and even accepted the tip from happy customers. Then demonetization happened, a move from government to curb black money from the economy, which again gave the negative push to the growth of Book My Meal. However, the team did not lose hope and moved ahead with the vision of revolutionizing this segment.</p>
+                           
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="about_right_ms">
+                            <div class="about_ms_item wb50">
+                                <img src="{% static 'img/about-item/about-item-ms-1.jpg' %}" alt="">
+                            </div>
+                            <div class="about_ms_item wb25">
+                                <img src="{% static 'img/about-item/about-item-ms-2.jpg' %}" alt="">
+                            </div>
+                            <div class="about_ms_item wb25">
+                                <img src="{% static 'img/about-item/about-item-ms-3.jpg' %}" alt="">
+                            </div>
+                            <div class="about_ms_item wb50">
+                                <img src="{% static 'img/about-item/about-item-ms-4.jpg' %}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row about_inner_item">
+                    <div class="col-md-6">
+                        <div class="about_right_ms">
+                            <div class="about_ms_item">
+                                <img src="{% static 'img/about-item/about-item-ms-5.jpg' %}" alt="">
+                            </div>
+                            <div class="about_ms_item">
+                                <img src="{% static 'img/about-item/about-item-ms-6.jpg' %}" alt="">
+                            </div>
+                            <div class="about_ms_item">
+                                <img src="{% static 'img/about-item/about-item-ms-7.jpg' %}" alt="">
+                            </div>
+                            <div class="about_ms_item">
+                                <img src="{% static 'img/about-item/about-item-ms-8.jpg' %}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="about_left_content">
+                            <h4>Services</h4>
+                            <p>Service Additions – Book My Meal is going to introduce some new concepts in the market. One of them is “Book My Meal Junior”, where they have plans of providing accurate nutrition to school kids as per their age, height, and weight. They will also track the health of kids quarterly, and based on that diet plan will be decided by expert nutritionists and dieticians.Another revolutionary plan by Book My Meal is, Jashn; where they aim to provide a no-frills solution for theme based catering needs. They will not only serve food but end-to-end solutions of catering.</p>
+                         <!--   <ul>
+                                <li><a href="#"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></li>
+                                <li><a href="#"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> The standard chunk of Lorem Ipsum used.</a></li>
+                                <li><a href="#"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Sed ut perspiciatis unde omnis iste natus error.</a></li>
+                                <li><a href="#"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> At vero eos et accusamus et iusto odio dignissimos.</a></li>
+                            </ul>  -->
+                            <p>BookMyMeal is an app & portal which allows its users to order food from various different food joints with home delivery or pick up options in a most easiest & fastest way. It is handled by Smile India Knowledge Services P Ltd. company is a concept conceived, nurtured and brought to fruition by Azure Knowledge Corporation. Smile India Knowledge Services P Ltd reserves full rights of BookMyMeal applications, trademarks, logo & websites. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+{% endblock %}
+{% block todaymenu %}
+{% endblock %}
+{% block chef %}
+{% endblock %}
+{% block news %}
+{% endblock %}

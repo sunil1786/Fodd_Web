@@ -1,0 +1,169 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block slider %}
+{% endblock %}
+
+{% block service %}
+
+<link href="{% static 'Book My Meal_files/custom.css' %}" rel="stylesheet">
+
+   <section class="slider_area">
+            <div class=slider_inner>
+                <div class="rev_slider fullwidthabanner"  data-version="5.3.0.2" id="home-slider">
+                    <ul> 
+                        <li data-slotamount="7" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="600" data-rotate="0" data-saveperformance="off">
+                            <!-- MAIN IMAGE -->
+                            <img src="{% static 'back-reg.png' %}"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+                            <!-- LAYERS -->
+                             <div class="reg-main" style="margin-top: 100px">
+                                <div data-backdrop="static" class=" bs-example-modal-sm">
+                                        <div role="document" class="modal-dialog modal-sm form-start">
+                                        <div class="modal-content main-reg-box">
+                                        <div class="LoginErrors22"></div>
+                                        <div class="LoginSuccess22"></div>
+                                        <div class="modal-header">
+                                        <h4 id="myModalLabel" class="modal-title red" align="center">Login</h4>
+                                        <font style="color:orange;font-size:20px;">{{output}}</font>
+                                         </div>
+                                         <form name="registerForm" id="registerForm" role="form" method="post" class="validate" novalidate="novalidate">
+                                          {% csrf_token %}
+                                         <!-- <input style="display:none" type="text" name="fakeusernameremembered">
+                                             <input style="display:none" type="password" name="fakepasswordremembered">-->
+                                          <div class="modal-body input-style">
+                                        <!--<div class="form-group"> 
+                                           
+                                            <input class="form-control input" type="text" name="user_fullname" id="user_fullname" data-message-required="Please enter fullname" data-validate="required" placeholder="Mobile No. or Email">
+                                        </div>-->
+                                          <div class="form-group">
+                                             <label>Mobile No. or  Email</label>
+                                            <input class="form-control input" type="email" name="email" placeholder="E-mail" data-message-required="Please enter email-id" id="user_email1" data-validate="required,email">
+                                          </div>
+                                           <div class="form-group">
+                                            <label>Password</label>
+                                             <input class="form-control input" type="password" name="password" placeholder="Password" id="user_password5" data-validate="user_password" data-message-required="Please enter password">
+                                          </div>
+                                         
+                                        <input type="hidden" id="check_login" value="1">         
+                                          <a class="login-forgot-password" href="#" id="forgotPwd" onclick="forgotPwd()">Forgot Password?</a>
+                                        </div>
+                                    
+                                        <div class="modal-footer">
+                                          <input class="btn btn-red form-group" type="submit" name="loginSubmit" id="loginSubmit" value="Login">
+                                            <p class="size12 text-center">Don't have an account?<a class="red" href="{{curl}}register/"> SignUp here.</a>
+                                                      <!--</p><p class="text-center"><strong>OR</strong></p>
+                                                     <p class="text-center">Login as a<a class="red" href="https://bookmymeal.in/index.php/Web/guestRegister"> Guest</a></p>-->
+                                        </div>
+                                      </form>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+
+                            
+                        </li>
+                    </ul> 
+                </div><!-- END REVOLUTION SLIDER -->
+            </div>
+        </section>
+        <div class="copy_right_area">
+                <div class="container">
+                    <div class="pull-left">
+                        <h5><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">FirstMeal</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+</p></h5>
+                    </div>
+                    <div class="pull-right">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active"><a href="#">Home</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Menu</a></li>
+                           <!-- <li><a href="#">Gallery</a></li>
+                            <li><a href="#">Reservation</a></li>
+                            <li><a href="#">News</a></li>-->
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        <script type="text/javascript">
+      $('#test').click(function() {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 800);
+
+        });
+</script>
+<script>
+    $(document).ready(function (e) {
+        $('.menu').click(function () {
+            $('nav, body').toggleClass('active');
+        });
+        $('.main_header ul li').click(function () {
+            $('.main_header ul li > ul').toggleClass('active');
+        });
+        //$('.action_btns').click(function () {
+            //$('.action_btns, .package_time').toggleClass('active');
+        //});
+
+
+    });
+
+    $("div.bhoechie-tab-menu>div.list-group>a").click(function (e) {
+        e.preventDefault();
+        $(this).siblings('a.active').removeClass("active");
+        $(this).addClass("active");
+        var index = $(this).index();
+        $("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
+        $("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
+    });
+    
+</script>
+<script>
+   var fixmeTop = $('#fixme').offset().top;
+   $(window).scroll(function () {
+       var currentScroll = $(window).scrollTop();
+        if (currentScroll >= fixmeTop) {
+           $('#fixme').addClass('active')
+        } else {
+            $('#fixme').removeClass('active')
+       }
+   });
+</script>
+<script>
+        $(window).scroll(function() {
+    if ($(this).scrollTop() > 1){  
+        $('.main_header').addClass("sticky");
+        $('.main_header').addClass("background");
+      }
+      else{
+        $('.main_header').removeClass("sticky");
+        $('.main_header').removeClass("background");
+      }
+    });
+</script>
+<script>
+function forgotPwd() {
+  var person = prompt("Please enter your email or mobile no.", "");
+  if (person != null) {
+    document.getElementById("forgotPwd").innerHTML =
+    "Hello " + person + "! How are you today?";
+    prompt("")
+  }
+}
+</script>
+
+
+
+{%endblock%}
+{% block todaymenu %}
+{% endblock %}
+{% block chef %}
+{% endblock %}
+{% block news %}
+{% endblock %}
+{% block footer %}
+{% endblock %}

@@ -1,0 +1,88 @@
+{% extends 'adminhome.html' %}
+
+{% load static %}
+
+{% block slider %}
+        <section class="banner_area">
+            <div class="container">
+                <div class="banner_content">
+                    <h4> Manage Users  </h4>
+                 <!--   <a href="{{curl}}admin/">Home</a>
+                    <a class="active" href="{{curl}}menu/">Menu</a>  -->
+                </div>
+            </div>
+        </section>
+{% endblock %}
+
+
+{% block service %}
+<h1 align="center">Customer List</h1>
+<br>
+<center>
+<table class="table table-striped" cellspacing="10">
+<tr style="background-color: gray">
+  <th >customer Id</th>
+  <th>Name</th>
+  <th>Email</th>
+  <th>Address</th>
+  <th>Mobile</th>
+  <th>City</th>
+  <th>DOB</th>
+  <th>Status</th>
+  <th>Action</th>  
+</tr>
+{% for row in userlist %}
+<tr>
+    <td>{{row.regid}}</td>
+    <td>{{row.full_name}}</td>
+    <td>{{row.email}}</td>
+    <td>{{row.address}}</td>
+    <td>{{row.mobile_number}}</td>
+    <td>{{row.select_city}}</td>
+    <td>{{row.dob}}</td>
+    <td>
+      {% if row.status %}
+      <a href={{curl}}myadmin/customerstatus?regid={{row.regid}}&vstatus=block style="color: green; font-size: 18px" title="Block">Block</a>
+      {% else %}
+      <a href={{curl}}myadmin/customerstatus?regid={{row.regid}}&vstatus=unblock style="color: red; font-size: 18px" title="Un-Block">Un-Block</a>
+
+      {%endif%}
+
+    </td>
+    <td><a href="{{curl}}myadmin/customerstatus?regid={{row.regid}}&vstatus=delete" style="color: red; font-size: 18px" title="Delete" ><i class="fa fa-trash"></i></a></td>
+
+</tr>
+{% endfor %}
+</table>
+</center>
+<br>
+{% endblock %}
+{% block todaymenu %}
+{% endblock %}
+{% block chef %}
+{% endblock %}
+{% block news %}
+{% endblock %}
+{% block footer %}
+<div class="copy_right_area">
+                <div class="container">
+                    <div class="pull-left">
+                        <h5><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Welcome To Our Meal <i class="fa fa-heart-o" aria-hidden="true"></i>  <a href="https://colorlib.com" target="_blank">{{sunm}}</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+</p></h5>
+                    </div>
+                    <div class="pull-right">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active"><a href="#">Home</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Menu</a></li>
+                           <!-- <li><a href="#">Gallery</a></li>
+                            <li><a href="#">Reservation</a></li>
+                            <li><a href="#">News</a></li>-->
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+{% endblock %}

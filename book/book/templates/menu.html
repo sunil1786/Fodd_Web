@@ -1,0 +1,76 @@
+
+
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block slider %}
+
+<section class="banner_area">
+            <div class="container">
+                <div class="banner_content">
+                    <h4>Menu List</h4>
+                    <a href="{{curl}}home/">Home</a>
+                    <a class="active" href="{{curl}}menu/">Menu</a>
+                </div>
+            </div>
+        </section>
+
+{% endblock %}
+        <!--================End Banner Area =================-->
+        
+        <!--================End Our feature Area =================-->
+{% block service %}
+{% endblock %}
+{% block todaymenu %}
+<section class="most_popular_item_area">
+            <div class="container">
+                <div class="s_white_title">
+                    <h3>Our Food</h3>
+                    <h2>Menu</h2>
+                </div>
+                <div class="popular_filter">
+                    <ul>
+                        <li class="active" data-filter="*"><a href="">All</a></li>
+                        <li data-filter=".break"><a href="">Breakfast</a></li>
+                        <li data-filter=".lunch"><a href="">Lunch</a></li>
+                        <li data-filter=".dinner"><a href="">Dinner</a></li>
+                    <!--    <li data-filter=".snacks"><a href="">Snacks</a></li> -->
+                        <li data-filter=".coffee"><a href="">Coffee</a></li>
+                    </ul>
+                </div> 
+                <div class="p_recype_item_main">
+                    <div class="row p_recype_item_active">
+                        {% for row in menulist %}
+                        <div class="col-md-6 {{row.mealcatnm}} ">
+                            <div class="media">
+                                <div class="media-left">
+                                    <img src="{{media_url}}/{{row.mealimg}}" height="155" width="130" alt="">
+                                </div>
+                                <div class="media-body">
+                                    
+                                    <a href=""><h3>{{row.mealnm}}</h3></a>
+                                    
+                                    <h4>&#8377;{{row.mealprice}}</h4>
+                                    <p>{{row.mealdisc}} </p>
+                                    <a class="read_mor_btn" href="{{curl}}login/">Add To Cart</a>
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-star-half-o"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                  {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </section>
+{% endblock %}
+{% block chef %}
+{% endblock %}
+{% block news %}
+{% endblock %}

@@ -1,0 +1,199 @@
+{% extends 'userhome.html' %}
+
+{% load static %}
+
+{% block slider %}
+{% endblock %}
+
+{% block service %}
+
+ <link href="{% static 'Book My Meal_files/custom.css' %}" rel="stylesheet">
+
+<section class="slider_area">
+            <div class=slider_inner>
+                <div class="rev_slider fullwidthabanner"  data-version="5.3.0.2" id="home-slider">
+                    <ul> 
+                        <li data-slotamount="7" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="600" data-rotate="0" data-saveperformance="off">
+                            <!-- MAIN IMAGE -->
+                            <img src="{% static 'back-reg.png' %}"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+                            <!-- LAYERS -->
+                             <div class="reg-main"  >
+    <div data-backdrop="static" class=" bs-example-modal-sm">
+  <div role="document" class="modal-dialog modal-sm form-start">
+    <div class="modal-content main-reg-box">
+        <div class="LoginErrors22"></div>
+        <div class="LoginSuccess22"></div>
+      <div class="modal-header">
+        <h4 id="myModalLabel" class="modal-title red" align="center" >Edit Profile</h4>
+      </div>
+       <font style="color:orange;font-size:20px;"></font>
+       <br>
+      <form name="registerForm" id="registerForm" role="form" method="POST" class="validate" novalidate="novalidate" action="{{curl}}user/usereditprofile/">
+       {% csrf_token %}
+       
+        <input style="display:none" type="text" name="fakeusernameremembered">
+        <input style="display:none" type="password" name="fakepasswordremembered">
+      <div class="modal-body input-style">
+        <div class="form-group"> 
+            <input class="form-control input" type="text" name="full_name" id="user_fullname" data-message-required="Please enter fullname" data-validate="required" value={{userdetails.full_name}} >
+        </div>
+        <div class="form-group">
+            <input readonly class="form-control input" type="email" name="email" value={{userdetails.email}}  data-message-required="Please enter email-id" id="user_email1" data-validate="required,email">
+        </div>
+         <div class="form-group">
+             <input class="form-control input" name="password" type="text" value={{userdetails.password}}  id="user_password5" data-validate="user_password" data-message-required="Please enter password">
+        </div>
+         <div class="form-group">
+            <input class="form-control input" name="confirm_password" type="text" value={{userdetails.confirm_password}} id="cnfrm_password" equalto="#user_password5" data-validate="required">
+        </div>
+         
+         <div class="form-group">
+             <input class="form-control input" type="text" name="mobile_number" value={{userdetails.mobile_number}} id="user_contact" data-validate="required,number,maxlength[10]" data-message-required="Please enter mobile number">
+        </div>
+        <div class="form-group" align="center" class="form-control input">
+        <tr>
+                <td>Gender&nbsp;&nbsp;&nbsp;</td>
+                   <td>
+                    Male <input type="radio" {{m}} name="gender" value="male"/>
+                    &nbsp;&nbsp;
+                    Female <input type="radio" {{f}} name="gender" value="female"/>
+                   </td>
+       </tr>
+     </div>
+           <div class="form-group" align="center" class="form-control input">
+             <tr>
+                 <td>Date of Birth</td>
+                 <td><input type="date" name="dob" value={{userdetails.dob}}></td>
+                 </tr>
+        </div>
+
+
+
+          <div class="form-group">
+                <select name="select_city" id="city_id" class="form-control input" data-validate="required" data-message-required="Please select city">
+                    <option value="required">{{userdetails.select_city}}</option>
+                    <option>Bhopal</option>
+                    <option>Indore</option>
+                    <option>Mumbai</option>
+                    <option>Delhi</option>
+                    <option>Banglore</option>
+                    <option>Patna</option>
+                    <option>Patna</option>
+                    <option>Patna</option>
+              </select>
+         </div>
+         
+        
+         <div class="form-group">
+             
+             <textarea class="form-control input" placeholder="Address" name="address" id="user_address" data-validate="required" data-message-required="Please enter address">{{userdetails.address}}</textarea>
+        </div> 
+         
+      </div>
+    
+      <div class="modal-footer">
+          <input type="submit" class="btn btn-red " name="registerSubmit" value="Update">
+      </div>
+            </form>
+    </div>
+  </div>
+</div>
+  </div>
+
+       </ul> 
+   </div><!-- END REVOLUTION SLIDER -->
+    </div>
+</section>
+<div class="copy_right_area">
+                <div class="container">
+                    <div class="pull-left">
+                        <h5><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">FirstMeal</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+</p></h5>
+                    </div>
+                    <div class="pull-right">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active"><a href="#">Home</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Menu</a></li>
+                           <!-- <li><a href="#">Gallery</a></li>
+                            <li><a href="#">Reservation</a></li>
+                            <li><a href="#">News</a></li>-->
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+<script type="text/javascript">
+      $('#test').click(function() {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 800);
+
+        });
+</script>
+<script>
+    $(document).ready(function (e) {
+        $('.menu').click(function () {
+            $('nav, body').toggleClass('active');
+        });
+        $('.main_header ul li').click(function () {
+            $('.main_header ul li > ul').toggleClass('active');
+        });
+        //$('.action_btns').click(function () {
+            //$('.action_btns, .package_time').toggleClass('active');
+        //});
+
+
+    });
+
+    $("div.bhoechie-tab-menu>div.list-group>a").click(function (e) {
+        e.preventDefault();
+        $(this).siblings('a.active').removeClass("active");
+        $(this).addClass("active");
+        var index = $(this).index();
+        $("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
+        $("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
+    });
+    
+</script>
+<script>
+   var fixmeTop = $('#fixme').offset().top;
+   $(window).scroll(function () {
+       var currentScroll = $(window).scrollTop();
+        if (currentScroll >= fixmeTop) {
+           $('#fixme').addClass('active')
+        } else {
+            $('#fixme').removeClass('active')
+       }
+   });
+</script>
+<script>
+        $(window).scroll(function() {
+    if ($(this).scrollTop() > 1){  
+        $('.main_header').addClass("sticky");
+        $('.main_header').addClass("background");
+      }
+      else{
+        $('.main_header').removeClass("sticky");
+        $('.main_header').removeClass("background");
+      }
+    });
+</script>
+<script>
+function myFunction() {
+  confirm("Please confirm the Details");
+  
+}
+</script>
+{% endblock %}
+{% block todaymenu %}
+{% endblock %}
+{% block chef %}
+{% endblock %}
+{% block news %}
+{% endblock %}
+{% block footer %}
+{% endblock %}

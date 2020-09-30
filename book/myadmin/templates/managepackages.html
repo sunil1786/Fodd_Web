@@ -1,0 +1,113 @@
+{% extends 'adminhome.html' %}
+
+{% load static %}
+
+{% block slider %}
+        <section class="banner_area">
+            <div class="container">
+                <div class="banner_content">
+                    <h4>Manage Packages  </h4>
+                 <!--   <a href="{{curl}}admin/">Home</a>
+                    <a class="active" href="{{curl}}menu/">Menu</a>  -->
+                </div>
+            </div>
+        </section>
+{% endblock %}
+
+
+{% block service %}
+<center>
+<h1>Add Packages Here</h1>
+</center>
+
+<font style="color:orange;font-size:20px;">{{output}}</font>
+<br>
+<form enctype="multipart/form-data" method="post" action={{curl}}myadmin/managepackages/ >
+{% csrf_token %}
+<table class="table table-striped" cellspacing="10">
+<tr>
+    <td>Package Name</td>
+    <td><input type="text" name="packnm" placeholder="package name"/></td>
+    <td>Package Price</td>
+    <td><input type="text" name="packprice" placeholder="package price"/></td>
+</tr>
+<tr>
+    <td>package discription</td>
+    <td><input type="text" name="packdisc" placeholder="discription"/></td>
+
+    <td>package Image</td>
+    <td><input type="file" name="packimag"/></td>
+</tr>
+<tr>
+    <td>Package duration</td>
+    <td><input type="text" name="packduration" placeholder="package duration"/></td>
+    <td><input class="btn btn-success" type="submit" name="s" value="Add package"/></td>
+    <td></td>
+</tr>
+</table>
+
+<table>
+    <tr style="background-color: grey;">
+        <th>
+            <td></td>
+        </th>
+    </tr>
+</table>
+<table class="table table-striped">
+    <tr style="background-color: grey">
+        <th>Package ID</th>
+        <th>Package Name</th>
+        <th>Package Price</th>
+        <th>Package Discription</th>
+        <th>Package Duration</th>
+        <th>Edit Category</th>
+        <th>Action</th>
+    </tr>
+{% for row in packlist %}
+    <tr>
+        
+        <td>{{row.packid}}</td>
+        <td>{{row.packnm}}</td>
+        <td>{{row.packprice}}</td>
+        <td>{{row.packdisc}}</td>
+        <td>{{row.packduration}}</td>
+        <td><a href="#" title="Edit" ><i class="fa fa-edit"></i></a></td>
+        <td><a href="#" title="Delete" ><i class="fa fa-trash"></i></a></td>
+        
+    </tr>
+{% endfor %}
+</table>
+<br>
+</form>
+
+
+{% endblock %}
+{% block todaymenu %}
+{% endblock %}
+{% block chef %}
+{% endblock %}
+{% block news %}
+{% endblock %}
+{% block footer %}
+<div class="copy_right_area">
+                <div class="container">
+                    <div class="pull-left">
+                        <h5><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Welcome To Our Meal <i class="fa fa-heart-o" aria-hidden="true"></i>  <a href="https://colorlib.com" target="_blank">{{sunm}}</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+</p></h5>
+                    </div>
+                    <div class="pull-right">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active"><a href="#">Home</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Menu</a></li>
+                           <!-- <li><a href="#">Gallery</a></li>
+                            <li><a href="#">Reservation</a></li>
+                            <li><a href="#">News</a></li>-->
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+{% endblock %}
